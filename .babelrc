@@ -1,0 +1,27 @@
+{
+    "env": {
+        "test": {
+            "plugins": [
+                "@babel/plugin-transform-modules-commonjs",
+                [
+                    "module-resolver",
+                    {
+                        "root": [
+                            "./"
+                        ],
+                        "alias": {
+                            "Array": "./Array",
+                            "utils": "./utils"
+                        }
+                    }
+                ],
+                [
+                    "@babel/plugin-proposal-decorators",
+                    {
+                        "version": "2023-11"
+                    }
+                ]
+            ]
+        }
+    }
+}
